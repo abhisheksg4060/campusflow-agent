@@ -43,7 +43,6 @@ Instead of being “just another chatbot,” CampusFlow executes tasks in the ba
 ---
 
 ## 🏗️ Architecture
-![Architecture Diagram](docs/architecture.png)
 
 - **Frontend**: HTML, CSS, JavaScript  
 - **Backend**: Python + FastAPI  
@@ -53,6 +52,18 @@ Instead of being “just another chatbot,” CampusFlow executes tasks in the ba
 - **Deployment**: AWS Lambda / AgentCore  
 
 ---
+
+## 🏗️ CampusFlow Architecture
+
+### Mermaid Diagram
+```mermaid
+flowchart LR
+    A[Frontend (HTML/CSS/JS)] --> B[Backend (FastAPI)]
+    B --> C[CampusFlow Agent (Strands SDK)]
+    C --> D[Database (SQLite/DynamoDB)]
+    B --> E[Deployment (AWS Lambda / AgentCore)]
+
+___
 
 ## 📚 Tech Stack
 - Strands Agents SDK  
@@ -75,13 +86,3 @@ pip install -r requirements.txt
 
 
 
-
-## 🏗️ CampusFlow Architecture
-
-### Mermaid Diagram
-```mermaid
-flowchart LR
-    A[Frontend (HTML/CSS/JS)] --> B[Backend (FastAPI)]
-    B --> C[CampusFlow Agent (Strands SDK)]
-    C --> D[Database (SQLite/DynamoDB)]
-    B --> E[Deployment (AWS Lambda / AgentCore)]
