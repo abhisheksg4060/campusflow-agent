@@ -71,3 +71,17 @@ python -m venv .venv
 source .venv/bin/activate   # Linux/macOS
 .venv\Scripts\activate      # Windows
 pip install -r requirements.txt
+
+
+
+
+
+## 🏗️ CampusFlow Architecture
+
+### Mermaid Diagram
+```mermaid
+flowchart LR
+    A[Frontend (HTML/CSS/JS)] --> B[Backend (FastAPI)]
+    B --> C[CampusFlow Agent (Strands SDK)]
+    C --> D[Database (SQLite/DynamoDB)]
+    B --> E[Deployment (AWS Lambda / AgentCore)]
